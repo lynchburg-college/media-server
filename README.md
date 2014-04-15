@@ -41,7 +41,7 @@ Setup:
        configValue   : 
 
 
-2.  Examine config.default, plug in your own settings (database user/name from step 1) then save as config.php
+2.  Copy config.default to config.php, then edit in your own settings (database user/name from step 1) 
 
 
 3.  Create the /content directory structure.  Optionally, you can mount to anywhere you like, so long as it follows this structure:

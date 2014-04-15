@@ -1,6 +1,6 @@
 <?php
 
-$siteTitle = "Media Server"
+$siteTitle = "Media Server";
 
 # Database connection info
 $db = 'media';
