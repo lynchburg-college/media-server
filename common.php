@@ -13,6 +13,13 @@
  $pathAvailable =  "$pathRoot/content/available/";
  $urlPlayback = "$urlRoot/player/?";
 
+ if ( !is_dir($pathAvailable) )
+ {
+  die ("'content' directory not available");
+ }
+
+
+
  ini_set('max_input_time', 9999);
  ini_set('upload_tmp_dir',$pathIncoming);
  ini_set('upload_max_filesize', '4G');

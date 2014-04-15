@@ -5,16 +5,17 @@ Clone this project into /var/www
 
 Prerequisites:
 
-apache2             : Web server
-avconv              : AV Conversion  tool, formerly FFMpeg (already included in most distros)
-libavcodec-extra-53 : Conversion codecs
-mysql               : Database server for metadata
-php5                : Web scripting
-php5-mysql          : PHP library for mySQL connection
-php5-ldap           : LDAP library for authentication
-phpmyadmin          : Web tool for administering mySQL
-ffmpegthumbnailer   : Creates nice little thumbnails
+* apache2             : Web server
+* avconv              : AV Conversion  tool, formerly FFMpeg (already included in most distros)
+* libavcodec-extra-53 : Conversion codecs
+* mysql               : Database server for metadata
+* php5                : Web scripting
+* php5-mysql          : PHP library for mySQL connection
+* php5-ldap           : LDAP library for authentication
+* phpmyadmin          : Web tool for administering mySQL
+* ffmpegthumbnailer   : Creates nice little thumbnails
 
+Command:
 sudo apt-get install apache2 mysql-server mysql-client php5 php5-ldap php5-mysql phpmyadmin ffmpegthumbnailer libavcodec-extra-53 
 
 
@@ -36,24 +37,25 @@ Setup:
     * Move into the database you just created
     * -- Click Import > browse to database.sql and load it in.  
    
-    * Edit the config table, and add the following rows:
-       configSetting : 
-       configValue   : 
 
 
 2.  Copy config.default to config.php, then edit in your own settings (database user/name from step 1) 
 
 
 3.  Create the /content directory structure.  Optionally, you can mount to anywhere you like, so long as it follows this structure:
-    You need to create each of these directories, and give the whole tree read+write to all (chmod 0777)
+    You need to create each of these directories, and give the whole tree read+write to all 
 
-    /content
-    /content/available
-    /content/incoming
-    /content/converting
-    /content/log
+    (from the root directory, probably /var/www/media-server)
+
+    mkdir ./content
+    mkdir -p ./content/available
+    mkdir -p ./content/incoming
+    mkdir -p ./content/converting
+    mkdir -p ./content/log
         
+    chmod -R 0777 ./content
 
+    
 4.  Modify the PHP ini file ( /etc/php5/apache2/php.ini )
     Note - root path is probably /var/www/media-server
     
