@@ -1,7 +1,4 @@
-# -------------------------
 # Lynchburg College Media Server
-# -------------------------
-
 
 Prerequisites:
 
