@@ -1,0 +1,162 @@
+
+
+
+body {
+  font-family: "Arial", Arial, Sans-serif;
+
+  /* fallback */
+  background-color: white;
+
+  /* Safari 4-5, Chrome 1-9 */
+  background: -webkit-gradient(linear, left top, right top, from(#FFFFFF), to(#DEDEDE));
+
+  /* Safari 5.1, Chrome 10+ */
+  background: -webkit-linear-gradient(left, #ADD8E6, #FFFFFF);
+
+  /* Firefox 3.6+ */
+  background: -moz-linear-gradient(left, #ADD8E6, #FFFFFF);
+
+  /* IE 10 */
+  background: -ms-linear-gradient(left, #ADD8E6, #FFFFFF);
+
+  /* Opera 11.10+ */
+  background: -o-linear-gradient(left, #ADD8E6, #FFFFFF);
+}
+
+.inline { display: inline; }
+.clear { clear:both; display:block; }
+.tiny { font-size: 12px; }
+.right { text-align:right; }
+.center { text-align:center; }
+.indent { padding-left: 2em; }
+.topic { font-size: 16px; font-weight: bold; }
+.active { cursor:pointer; color:blue; }
+
+
+label { width: 6em;
+        text-align: right;
+        font-weight: bold;
+        margin-right: 0.5em;
+        display: inline; }
+
+#formSearch input {
+                   width: 80%;
+}
+
+#formEdit input {
+                   width: 16em;
+                }
+#formEdit textarea {
+           width: 16em;
+           height: 5em;
+         }
+
+#formEdit span.copy {
+           margin-left: 1em;
+         }
+
+#divUpload, #formLogin, #formEdit { display:none; }
+
+h1,h2,h3 { padding:0px; margin:0px; } 
+
+@media only screen {
+
+#header { background-color: #FFFFFF;
+          border-radius:15px;
+          -moz-border-radius: 15px;
+          padding: 1em;
+          margin-bottom: 1em;  
+        }
+#header img { float:left; width: 60px; height: auto; margin-right: 1em; }
+
+.wrapper { text-align:center; }
+
+
+
+@media only screen and (max-width: 480px) {
+        body {background-color: red ; }
+
+		#header {
+				  padding: 1em;
+				  margin-bottom: 1em;  
+				}
+		#header img { display:none; }
+
+		#header h3  { display:none; }
+
+		#player { width:320px; height:auto; }  
+		.wrapper { text-align:left; }
+}
+
+
+.results { width: 700px; margin: auto; border-left: thin gainsboro solid; border-right: thin gainsboro solid; }
+
+.videos { padding: 0em; list-style-type:none; width: 98%; }
+
+.videos .video { 
+            width: 625px;
+            z-index:10;
+            text-decoration:none;
+            position:relative; 
+            overflow:auto;
+            height:auto;
+            padding: 1em; 
+            margin: 0.5em; 
+            font-size: 14px;
+            border-radius:15px;
+            -moz-border-radius: 15px;
+             box-shadow: 2px 2px 5px #888888 ;
+         }
+
+.videos .video.available {  }
+.videos .video.converting { background-color:beige; }
+.videos .video.unknown { background-color:red; }
+
+.videos .video.private { background-color:antiquewhite; border: 1px navy dashed;}
+
+.videos .video:hover { background-color: gainsboro;  box-shadow: 2px 2px 16px #000000 ; }
+
+.videos .video:hover p.actionbar {display:inline;}
+
+.videos .video p { display:block; margin: 0;}
+
+.videos .video img.thumbnail { float:left; width: 120px; margin-right: 0.5em; }
+
+.videos .video p.title { font-size: 14px;  font-weight:bold; }
+.videos .video p.info { font-size: 12px; }
+.videos .video p.description{ font-size: 10px; margin-top: 0.5em; }
+.videos .video p.link { font-size: small; margin-top: 0.25em; }
+
+.videos .video p.actionbar { display:none; font-size: small; position:absolute; top:0; right:1em; left:1em; padding:0px; margin-top:-1px; text-align:right; }
+.videos .video p.actionbar span { color: maroon; padding:0.25em;}
+.videos .video p.actionbar span:hover { color:blue; text-decoration:underline; cursor:pointer; }
+
+
+
+.page_navigation {
+    height: 1.25em;
+    margin-bottom: 1em;
+    border-bottom: thin gainsboro solid;
+}
+
+.page_navigation , .alt_page_navigation{
+	padding-bottom: 10px;
+}
+
+.page_navigation a, .alt_page_navigation a{
+	padding:3px 5px;
+	margin:2px;
+	color:white;
+	text-decoration:none;
+	float: left;
+	font-family: Arial;
+	font-size: 12px;
+	background-color:gainsboro;
+}
+.active_page {
+	background-color:white !important;
+	color:black !important;
+}	
+
+
+

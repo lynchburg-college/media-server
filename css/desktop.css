@@ -1,0 +1,15 @@
+#header { background-color: #FFFFFF;
+          border-radius:15px;
+          -moz-border-radius: 15px;
+          padding: 1em;
+          margin-bottom: 1em;  
+        }
+#header img { float:left; width: 70px; height: auto; margin-right: 1em; }
+#header h1  { padding: 0px; margin: 0px; }
+#header h2  { padding: 0px; margin: 0px; }
+
+h1,h2,h3 { margin:0px; } 
+
+#player { width:720px; height:480px; }  
+.wrapper { text-align:center; }
+

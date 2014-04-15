@@ -1,0 +1,14 @@
+#header {
+          padding: 1em;
+          margin-bottom: 1em;  
+        }
+#header img { display:none; }
+
+#header h1  { font-size:small; padding: 0px; margin: 0px; }
+#header h2  { display:none; }
+
+h1,h2,h3 { margin:0px; font-size: small; } 
+#player { width:320px; height:auto; }  
+.wrapper { text-align:left; }
+
+

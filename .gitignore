@@ -1,0 +1,10 @@
+admin/*
+config.php
+*new*
+*.mp4
+*.webm
+*.ogv
+*.m4v
+*.avi
+*.log
+/echo360/*

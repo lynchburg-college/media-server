@@ -1,0 +1,25 @@
+<?php
+
+# Database connection info
+$db = 'media';
+$db_host = 'localhost';
+$db_user = 'media';
+$db_pwd = 'whatever';
+
+# LDAP connection info (optional)
+$ldap_host = 'ldap://whatever';
+$ldap_port = 389;
+
+# Root path of the web site (ie. /var/www, or PHP's __DIR__ variable)
+$pathRoot=__DIR__;
+
+# HTTP path to the media server
+$urlRoot="http://<whatever>";
+
+# Administrator(s) : user,user,user
+$adminUsers="<comma sep user list>";
+
+# To allow automatic login based upon IP
+$autoLogin = array ( "<userID>" => array( "remote_host"=>"<ip>","userID"=>"<userID>" ) );
+
+?>
