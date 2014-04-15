@@ -23,7 +23,7 @@ sudo apt-get install apache2 mysql-server mysql-client php5 php5-ldap php5-mysql
 Setup:
 
 
-1.  Database Setup
+Database Setup:
 
     Connect to http://localhost/phpmyadmin as root 
 
@@ -39,11 +39,11 @@ Setup:
    
 
 
-2.  Copy config.default to config.php, then edit in your own settings (database user/name from step 1) 
+Copy config.default to config.php, then edit in your own settings (database user/name from step 1) 
 
 
-3.  Create the /content directory structure.  Optionally, you can mount to anywhere you like, so long as it follows this structure:
-    You need to create each of these directories, and give the whole tree read+write to all 
+Create the /content directory structure.  Optionally, you can mount to anywhere you like, so long as it follows this structure:
+You need to create each of these directories, and give the whole tree read+write to all 
 
     (from the root directory, probably /var/www/media-server)
 
@@ -56,8 +56,8 @@ Setup:
     chmod -R 0777 ./content
 
     
-4.  Modify the PHP ini file ( /etc/php5/apache2/php.ini )
-    Note - root path is probably /var/www/media-server
+Modify the PHP ini file ( /etc/php5/apache2/php.ini )
+Note - root path is probably /var/www/media-server
     
     upload_tmp_dir=<root path>/content/incoming   
     upload_max_filesize=3G
@@ -68,8 +68,8 @@ Setup:
     post_max_size = 5G
     
 
-Usage:
 
+Usage:
     To upload :  First, log in.  Then, drag / drop video file onto the main page.
 
 
