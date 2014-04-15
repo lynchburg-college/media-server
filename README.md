@@ -16,12 +16,12 @@ Prerequisites:
 * ffmpegthumbnailer   : Creates nice little thumbnails
 
 Command:
+
 sudo apt-get install apache2 mysql-server mysql-client php5 php5-ldap php5-mysql phpmyadmin ffmpegthumbnailer libavcodec-extra-53 
 
 
 
-Setup:
-
+# Setup
 
 Database Setup:
 
@@ -39,8 +39,12 @@ Database Setup:
    
 
 
+Configuration :
+
 Copy config.default to config.php, then edit in your own settings (database user/name from step 1) 
 
+
+Directory Setup :
 
 Create the /content directory structure.  Optionally, you can mount to anywhere you like, so long as it follows this structure:
 You need to create each of these directories, and give the whole tree read+write to all 
@@ -56,6 +60,8 @@ You need to create each of these directories, and give the whole tree read+write
     chmod -R 0777 ./content
 
     
+PHP Setup : 
+
 Modify the PHP ini file ( /etc/php5/apache2/php.ini )
 Note - root path is probably /var/www/media-server
     
@@ -67,8 +73,6 @@ Note - root path is probably /var/www/media-server
     error_log = <root path>/error.log
     post_max_size = 5G
     
-
-
 Usage:
     To upload :  First, log in.  Then, drag / drop video file onto the main page.
 
