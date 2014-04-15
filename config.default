@@ -6,7 +6,7 @@ $db_host = 'localhost';
 $db_user = 'media';
 $db_pwd = 'whatever';
 
-# LDAP connection info (optional)
+# LDAP connection info 
 $ldap_host = 'ldap://whatever';
 $ldap_port = 389;
 

@@ -2,6 +2,12 @@
 
  include_once "config.php";
 
+ if ( !isset( $pathRoot ) )
+ {
+  die ("Could not load config.php!");
+ }
+
+
  $pathIncoming = "$pathRoot/content/incoming/";
  $pathConverting = "$pathRoot/content/converting/";
  $pathAvailable =  "$pathRoot/content/available/";
@@ -212,7 +218,8 @@ echo "\n\n\n$sql";
 		    $uploaded = $row->uploaded;
             $uploaded = date( "D M j", strtotime($uploaded) );
 
-		    $thumbnail = "http://media.lynchburg.edu/content/available/$mediaName"."_thumbnail.png";
+		    $thumbnail = "http://$urlRoot/content/available/$mediaName"."_thumbnail.png";
+
             $description="<![CDATA[<div><a target=\"player\" href=\"$link\"><img width=\"80\" src=\"$thumbnail\" /></a></div><div>$description</div>]]>";
 
 		    if ( !file_exists( realpath("./".$thumbnail) ) ) { $thumbnail=""; };
@@ -238,8 +245,9 @@ function showTiles( $search )
     GLOBAL $pathIncoming;
     GLOBAL $pathConverting;
     GLOBAL $pathAvailable;
+    GLOBAL $urlRoot;
     GLOBAL $urlPlayback;
-
+    
     GLOBAL $oUser;
       $isAdmin=$oUser->isAdmin();
       $currentUser=$oUser->userID();
@@ -264,7 +272,7 @@ function showTiles( $search )
 
             $uploadedUser =$row->uploadedUser ?: "anonymous";
                           
-		    $uploaded = $row->uploaded;
+	    $uploaded = $row->uploaded;
             #$uploaded = date( "D M j  g:i a", strtotime($uploaded) );
             $uploaded = date( "D M j", strtotime($uploaded) );
 
@@ -276,11 +284,10 @@ function showTiles( $search )
 		    $viewed = $row->viewed;
 
 		    $public = $row->public;
-            $isPublic = ($public == "1" );
+                   $isPublic = ($public == "1" );
 
-		    $thumbnail = "/content/available/$mediaName"."_thumbnail.png";
-		    if ( !file_exists( realpath("./".$thumbnail) ) ) { $thumbnail=""; };
-
+		    $thumbnail = "$mediaName"."_thumbnail.png";
+		    if ( !file_exists( realpath("./content/available/".$thumbnail) ) ) { $thumbnail=""; };
 
             $link = "";
 		    if ( glob( $pathAvailable.$mediaName.".*" ) )
@@ -330,7 +337,7 @@ function showTiles( $search )
             if( $isPublic OR $isAdmin OR $isOwner )
             {
                echo "<li class=\"video $status\" id=\"media_$mediaName\">" . 
-                           "<img class=\"thumbnail\" src=\"$thumbnail\" >" . 
+                           "<img class=\"thumbnail\" src=\"content/available/$thumbnail\" >" . 
                              "<p class=\"title\">$title</p>" . 
                              "<p class=\"info\">$uploaded by <span class=\"by\">$uploadedUser</span>$viewed</p>" .
                              "<p class=\"description\">$description</p>" . 

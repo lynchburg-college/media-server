@@ -24,7 +24,7 @@
    $uploaded = getMediaMeta_($mediaName,"uploaded");
    $uploadedUser = getMediaMeta_($mediaName,"uploadedUser");
 
-   $playbackPath = "/content/available/";
+   $playbackPath = "../content/available/";
 
    $isAdmin = ( $oUser->isAdmin() );
    $isOwner = ( $isAdmin || $oUser->userID() == $uploaded );
@@ -167,7 +167,7 @@ $( function() {
 
            $file="$playbackPath$mediaName".$source['ext'];
 
-           if( file_exists( realpath("../".$file) ) ) {
+           if( file_exists( realpath($file) ) ) {
 
               $element=$source['element'];
               echo "<$element src='$file' ";

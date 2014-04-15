@@ -7,7 +7,7 @@ if (!$db_connection)
     die("Can't connect to database server");
 
 if (!mysql_select_db($db, $db_connection))
-    die("Can't open media server database");
+    die("Can't open media server database ($db_host : $db) ");
 
 
 

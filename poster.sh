@@ -4,8 +4,8 @@ if [ $# -eq 0 ]; then
 
 else
 
-  pathConverting=/var/www/content/converting
-  pathAvailable=/var/www/content/available
+  pathConverting=./content/converting
+  pathAvailable=./content/available
   ext=_poster.png
   
   # Get the base name

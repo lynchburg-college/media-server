@@ -4,8 +4,8 @@ if [ $# -ne 1 ]; then
 
 else
 
-  pathConverting=/var/www/content/converting
-  pathAvailable=/var/www/content/available
+  pathConverting=./content/converting
+  pathAvailable=./content/available
   base=`basename $1 '.in'`
 
   extThumbnail=_thumbnail.png

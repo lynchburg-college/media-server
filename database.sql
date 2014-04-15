@@ -2,12 +2,6 @@
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
---
--- Database: `lcmedia`
---
-CREATE DATABASE `lcmedia` DEFAULT CHARACTER SET latin1 COLLATE utf8_general_ci;
-USE `lcmedia`;
-
 -- --------------------------------------------------------
 
 --

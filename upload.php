@@ -30,7 +30,9 @@ if (empty($_FILES))
     $inFile = $pathIncoming.$mediaName.".in";
 
     $tempFile = $_FILES['file']['tmp_name'];          
+    
     move_uploaded_file( $tempFile, $inFile );
+
 
     if( ! file_exists($inFile) )
     {
@@ -76,10 +78,10 @@ if (empty($_FILES))
     setMediaMeta_( $mediaName, "description", $description );
 
     # Make a thumbnail immediately
-    shell_exec("/var/www/thumbnail.sh '$inFile'");
+    shell_exec("$pathRoot/thumbnail.sh '$inFile'");
 
     # Convert
-    shell_exec("/var/www/convert.sh '$inFile' > /dev/null 2>&1 &");
+    shell_exec("$pathRoot/convert.sh '$inFile' > /dev/null 2>&1 &");
 
     echo "Success : $mediaName";
 

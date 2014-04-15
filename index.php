@@ -9,7 +9,7 @@ $currentUser = $oUser->userID();
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <![endif]-->
 
-  <title><?= getConfig("siteTitle") ?></title>
+  <title><?=$siteTitle?></title>
 
   <link href="css/dropzone.css" rel="stylesheet" type="text/css" media="all"  />
   <link href="css/main.css" rel="stylesheet" type="text/css" media="all"  />
@@ -24,10 +24,10 @@ $currentUser = $oUser->userID();
   <script src="js/main.js"></script>
 
   <script>
-   $( function() {
-                   $('.thumbnail').error(function(){  $(this).attr('src', './thumbnail_generic.png'); }); 
-                 }
-    );
+   //$( function() {
+   //                $('.thumbnail').error(function(){  $(this).attr('src', './thumbnail_generic.png'); }); 
+   //              }
+   // );
  </script>
 
 </head>
@@ -66,7 +66,7 @@ $currentUser = $oUser->userID();
 </form>
 <div id="header">
      <a href="?"><img src="img/logo.png" /></a>
-     <h2><?= getConfig("siteTitle") ?></h2>
+     <h2><?=$siteTitle ?></h2>
      <div><?=getSystemSummary()?></div>
 </div>
 <div class="clear"> </div>

@@ -26,9 +26,9 @@ if( isset( $_REQUEST['setPoster'] ) )
 {
     $frame=$_REQUEST['setPoster'];
     show("Poster was set to frame $frame");
-    $inFile="/var/www/content/available/$mediaName.mp4";
-    shell_exec("/var/www/convert.sh '$inFile' '$frame' > /dev/null 2>&1 &");
-    echo "/var/www/convert.sh '$inFile' '$frame' > /dev/null 2>&1 &";
+    $inFile="$pathRoot/content/available/$mediaName.mp4";
+    shell_exec("$pathRoot/convert.sh '$inFile' '$frame' > /dev/null 2>&1 &");
+    echo "$pathRoot/convert.sh '$inFile' '$frame' > /dev/null 2>&1 &";
 
 }
 

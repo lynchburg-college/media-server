@@ -1,4 +1,8 @@
 
+#!/bin/bash
+
+log=/var/www/media-server/convert.log
+
 
 if [ $# -ne 1 ]; then
 
@@ -6,16 +10,20 @@ if [ $# -ne 1 ]; then
 
 else
 
-  pathLog=/var/www/content/log
-  pathConverting=/var/www/content/converting
-  pathAvailable=/var/www/content/available
-  
+  pathRoot=$(cd `dirname "${BASH_SOURCE[0]}"` && pwd)/`basename "${BASH_SOURCE[0]}"`
+  pathLog="$pathRoot/content/log"
+  pathConverting="$pathRoot/content/converting"
+  pathAvailable="$pathRoot/content/available"
+
+  echo "Root Path : $pathRoot" >> $log
+
+
   # Rename the file to indicate that we are converting it
   source=${1%.*}
   mv "$1" "$source"
 
   # Build the poster immediately
-  /var/www/poster.sh "$source"
+  $pathRoot/poster.sh "$source"
 
   # Get the base name 
   mediaName=`basename $source`
