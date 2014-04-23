@@ -1,5 +1,10 @@
 # Lynchburg College Media Server
 
+Operating System:
+
+* Ubuntu Server 12.04 LTS (http://releases.ubuntu.com/precise/)
+
+
 Clone this project into /var/www
 
 
